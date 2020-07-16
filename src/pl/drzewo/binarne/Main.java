@@ -2,10 +2,7 @@ package pl.drzewo.binarne;
 
 public class Main {
     public static void main(String[] args) {
-        createBinaryTree();
-    }
 
-    public static BinaryTree createBinaryTree() {
         BinaryTree bt = new BinaryTree();
 
         bt.add(6);
@@ -16,6 +13,10 @@ public class Main {
         bt.add(7);
         bt.add(9);
 
-        return bt;
+
+
     }
+
+
+
 }

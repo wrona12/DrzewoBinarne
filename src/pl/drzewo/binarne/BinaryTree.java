@@ -12,6 +12,9 @@ public class BinaryTree {
         root = addRecursive(root, value);
     }
 
+
+
+
     private Node addRecursive(Node current, int value) {
 
         if (current == null) {
@@ -153,14 +156,14 @@ public class BinaryTree {
         Stack<Node> stack = new Stack<Node>();
         Node current = root;
         stack.push(root);
-        while(! stack.isEmpty()) {
-            while(current.left != null) {
+        while (!stack.isEmpty()) {
+            while (current.left != null) {
                 current = current.left;
                 stack.push(current);
             }
             current = stack.pop();
             visit(current.value);
-            if(current.right != null) {
+            if (current.right != null) {
                 current = current.right;
                 stack.push(current);
             }
@@ -171,14 +174,14 @@ public class BinaryTree {
         Stack<Node> stack = new Stack<Node>();
         Node current = root;
         stack.push(root);
-        while(! stack.isEmpty()) {
+        while (!stack.isEmpty()) {
             current = stack.pop();
             visit(current.value);
 
-            if(current.right != null)
+            if (current.right != null)
                 stack.push(current.right);
 
-            if(current.left != null)
+            if (current.left != null)
                 stack.push(current.left);
         }
     }
